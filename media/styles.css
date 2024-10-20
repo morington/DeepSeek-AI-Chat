@@ -1,0 +1,228 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #22272e;
+    /* Общий фон */
+    font-family: sans-serif;
+}
+
+#clearBtn {
+    width: 100%;
+    /* Кнопка во всю ширину */
+    padding: 5px 0px;
+    background-color: #22272e;
+    /* Фон кнопки */
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+}
+
+#clearBtn:hover {
+    background-color: #272c31;
+    /* Фон при наведении */
+}
+
+#chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #22272e;
+    /* Фон окна чата */
+    color: #ffffff;
+}
+
+#input-area {
+    padding: 10px;
+    background-color: #22272e;
+    /* Фон области ввода */
+    border-top: 1px solid #444c56;
+}
+
+#message {
+    width: 100%;
+    height: 100px;
+    /* Высота textarea */
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #22272e;
+    /* Фон textarea */
+    border: 1px solid #444c56;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.message {
+    border: 1px solid #444c56;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #22272e;
+    /* Фон сообщений */
+    color: #ffffff;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Стили для блоков кода */
+pre {
+    background-color: #2d333b;
+    /* Сделаем фон блоков кода чуть светлее */
+    padding: 10px;
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px solid #444c56;
+    color: #ffffff;
+    /* Белый текст для кода */
+}
+
+code {
+    font-family: monospace;
+    color: #e2e2e2;
+    /* Сделаем текст кода светлее */
+}
+
+/* Изменим цвет для функций */
+.hljs-title.function_ {
+    color: #79c0ff !important;
+    /* Названия функций */
+}
+
+/* Изменим цвет для строк */
+.hljs-string {
+    color: #8bc34a !important;
+    /* Строки */
+}
+
+.hljs-built_in {
+    color: #1b71f3 !important;
+    /* Запуск функций */
+}
+
+.hljs-number {
+    color: #5689d4 !important;
+    /* Числа */
+}
+
+
+/* Стили для блоков кода внутри сообщений */
+.message-body pre {
+    background-color: #2d333b;
+    /* Более светлый фон для контраста */
+    padding: 10px;
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px solid #444c56;
+    color: #ffffff;
+    /* Белый текст внутри блоков кода */
+}
+
+.message-body code {
+    font-family: monospace;
+    background-color: #2d333b;
+    color: #e2e2e2;
+    /* Яркий текст для inline-кода */
+}
+
+/* Стили для сообщений */
+.message {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444c56;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #2d333b;
+    color: #ffffff;
+}
+
+.message-timestamp {
+    font-size: 10px;
+    /* Размер шрифта для метки времени */
+    color: #888;
+    /* Цвет метки времени (серый) */
+    margin-bottom: 5px;
+    /* Немного отступа сверху */
+    font-weight: bold;
+}
+
+.user-message .message-timestamp {
+    text-align: right;
+    /* Выравнивание заголовка по правому краю */
+}
+
+.user-message .message-body {
+    text-align: right;
+}
+
+.user-message {
+    background-color: #22272e;
+    align-self: flex-end;
+    /* Сообщения пользователя справа */
+}
+
+.user-message .message-header {
+    text-align: right;
+    /* Выравнивание заголовка по правому краю */
+}
+
+.bot-message {
+    background-color: #181b20;
+    align-self: flex-start;
+    /* Сообщения бота слева */
+}
+
+/* Чтобы сообщения были симметричными по краям */
+#chat-window {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Сообщения бота слева */
+    padding: 10px;
+    background-color: #22272e;
+    color: #ffffff;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #c2c2c2;
+    font-size: 15px;
+}
+
+.message-body {
+    color: #d3d3d3;
+}
+
+/* Стили для ссылок внутри сообщений */
+.message-body a {
+    color: #539bf5;
+    text-decoration: none;
+}
+
+.message-body a:hover {
+    text-decoration: underline;
+}
+
+/* Дополнительные стили для улучшения отображения */
+.message-body p {
+    margin: 0 0 10px 0;
+}
+
+.message-body ul,
+.message-body ol {
+    margin: 0 0 10px 20px;
+}
+
+.message-body li {
+    margin-bottom: 5px;
+}
